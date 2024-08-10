@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin Dashboard </title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Nav Bar -->
+        <div class="nav-bar">
+            <div class="logo"> Dash<span>board</span></div>
+            <div class="menu" id="menu"><i class="fa-solid fa-bars"></i></div>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey <b>Usama</b></p>
+                    <span>Admin</span>
+                </div>
+                <div class="picture">
+                    <img src="Media/Images/Photo.jpg" alt="">
+                </div>
+            </div>
+        </div> 
+        <!-- Aside -->
+        <aside id="menu-list">
+            <div class="links">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-table-columns"></i>
+                        <a href="">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-users"></i>
+                        <a href="">Customers</a>
+                    </li>
+                    <li >
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="">Orders</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <a href="">Analytics</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-message"></i>
+                        <a href="">Messages</a>
+                        <span class="notifications"> 26 </span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-product-hunt"></i>
+                        <a href="">Products</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bug"></i>
+                        <a href="">Reports</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <a href="">Settings</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
+                        <a href="">Add Product</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="log-out" id="log-out">
+                <button><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+            </div>
+        </aside>
+        <!-- Main -->
+        <main>
+            <div class="stats">
+                <h1>Stats</h1>
+                <div class="stats-content">
+                    <div class="sales">
+                        <i class="fa-solid fa-comments-dollar"></i>
+                        <div class="middle">
+                            <div class="middle-left">
+                                <h3>Total Sales</h3>
+                                <span>$25,024</span>        
+                            </div>
+                            <div class="middle-right">
+                                <svg width="100" height="100">
+                                    <circle class="my-circle" cx="50" cy="50" r="40" />
+                                </svg>
+                                <div class="text">50%</div>
+                            </div>
+                        </div>
+                        <span>Last 24 Hours</span>
+                    </div>
+                    <div class="expenses">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        <div class="middle">
+                            <div class="middle-left">
+                                <h3>Total Expenses</h3>
+                                <span>$20,464</span>        
+                            </div>
+                            <div class="middle-right">
+                                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="my-circle" cx="50" cy="50" r="40" />
+                                </svg>
+                                <div class="text">60%</div>
+                            </div>
+                        </div>
+                        <span>Last 24 Hours</span>
+                    </div>
+                    <div class="income">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <div class="middle">
+                            <div class="middle-left">
+                                <h3>Total Income</h3>
+                                <span>$89,561</span>        
+                            </div>
+                            <div class="middle-right">
+                                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="my-circle" cx="50" cy="50" r="40" />
+                                </svg>
+                                <div class="text">80%</div>
+                            </div>
+                        </div>
+                        <span>Last 24 Hours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-orders">
+                <h1>Recent Orders</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flodable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Smartwatch Pro</td>
+                            <td>87456</td>
+                            <td>Completed</td>
+                            <td class="success">Finished</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Portable Speaker</td>
+                            <td>74129</td>
+                            <td>In Progress</td>
+                            <td class="info">Ongoing</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Portable Speaker</td>
+                            <td>74129</td>
+                            <td>In Progress</td>
+                            <td class="info">Ongoing</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Portable Speaker</td>
+                            <td>74129</td>
+                            <td>In Progress</td>
+                            <td class="info">Ongoing</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Wireless Keyboard</td>
+                            <td>65829</td>
+                            <td>Completed</td>
+                            <td class="success">Finished</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="" class="show-all">
+                    <i class="fas fa-angle-double-up fa-2x"></i>
+                    Show All
+                </a>
+            </div>
+        </main>
+        <!-- Right-Aside -->
+        <div class="right-side">
+            <div class="recent-updates">
+                <h1>Recent Updates</h1>
+                <div class="recent-content">
+                    <div class="cont">
+                        <div class="image"><img src="Media/Images/User.jpg" alt=""></div>
+                        <div class="cont-context">
+                            <b>User 1</b> received his order of new pairs of cleats.
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <div class="image"><img src="Media/Images/User.jpg" alt=""></div>
+                        <div class="cont-context">
+                            <b>User 2</b> received his order of new basketball shirts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analytics">
+                <h1>Sales Analytics</h1>
+                <div class="online-orders">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="info">
+                        <h3>ONLINE ORDERS</h3>
+                        <span>Last 24 Hours</span>
+                    </div>
+                    <span class="order-percentage"> +28% </span>
+                    <span class="order-numbers"> 3849 </span>
+                </div>
+                <div class="offline-orders">
+                    <i class="fa-solid fa-truck"></i>
+                    <div class="info">
+                        <h3>OFFLINE ORDERS</h3>
+                        <span>Last 24 Hours</span>
+                    </div>
+                    <span class="order-percentage"> -17% </span>
+                    <span class="order-numbers"> 1220 </span>
+                </div>
+                <div class="new-customers">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="info">
+                        <h3>NEW CUSTOMERS</h3>
+                        <span>Last 24 Hours</span>
+                    </div>
+                    <span class="order-percentage"> +50% </span>
+                    <span class="order-numbers"> 6546 </span>
+                </div>
+                <div class="add-product">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Product
+                </div>    
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

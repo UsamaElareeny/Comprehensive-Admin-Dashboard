@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-background: #F5F4F7;
+    --primary-color: #848C98;
+    --secondary-color: #5445AC;
+    --main-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --main-border-radius: 50px;
+    --section-padding: 40px;
+    --margin-top: 20px;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background-color: var(--color-background);
+    padding: 0px 20px;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+.container{
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 220px auto 460px;
+    grid-template-areas: 
+        "nav nav nav"
+        "aside main right";
+}
+/* Navbar */
+.nav-bar{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+.nav-bar .menu{
+    display: none;
+}
+.nav-bar .logo{
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+.nav-bar .logo span{
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.nav-bar .profile{
+    display: flex;
+    margin-right: 10px;
+}
+.nav-bar .profile .picture{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.nav-bar .profile .picture img{
+    max-width: 100%;
+}
+.nav-bar .profile .info{
+    font-size: 14px;
+    text-align: right;
+}
+.nav-bar .profile .info span{
+    display: block;
+    margin-top: -5px;
+    font-size: 12px;
+    font-weight: 200;
+}
+/* Aside */
+aside{
+    grid-area: "aside";
+    display: flex;
+    flex-flow: column;
+    margin-top: var(--margin-top);
+}
+aside .links ul{
+    color: var(--primary-color);
+}
+aside .links ul li{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    transition: all 200ms ease-in-out;
+
+}
+aside .links ul li.active{
+    position: relative;
+    margin-left: 20px;
+    color: var(--secondary-color);
+}
+aside .links ul li.active::before{
+    content: "";
+    position: absolute;
+    height: calc(100% + 40px);
+    width: 5px;
+    top: -20px;
+    left: -15px;
+    background-color: var(--secondary-color);
+}
+
+aside .links ul li:hover{
+    margin-left: 10px;
+    color: var(--secondary-color);
+}
+aside .links ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+aside .log-out{
+    position: fixed;
+    bottom: 30px;
+}
+aside .log-out button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+aside .log-out:hover button{
+    color: var(--secondary-color);
+    margin-left: 10px;
+}
+aside .log-out button i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.notifications{
+    color: white;
+    background-color: #F2868B;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+/* Main */
+main{
+    grid-area: main;
+    padding: 0px 20px;
+    margin-top: var(--margin-top);
+}
+main .stats h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+main .stats .stats-content {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+main .stats .stats-content > div {
+    box-shadow: var(--main-box-shadow);
+    background-color: white;
+    transition: all 800ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: var(--section-padding);
+    border-radius: var(--main-border-radius);
+}
+main .stats .stats-content > div:hover{
+    box-shadow: none;
+}
+main .stats .stats-content > div i{
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .stats .stats-content > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .stats .stats-content > div .middle .middle-left h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+main .stats .stats-content > div .middle .middle-left span{
+    font-size: 30px;
+    font-weight: 700;
+}
+main .stats .stats-content > div .middle .middle-right{
+    position: relative;
+}
+main .stats .stats-content > div .middle .middle-right svg {
+    width: 100%;
+    height: 100%;
+}
+main .stats .stats-content > div .middle .middle-right circle{
+    height: 100%;
+    width: 100%;
+    fill: transparent;
+    stroke: var(--secondary-color);
+    stroke-width: 10px;
+    stroke-dasharray: 251.2;
+    transition: all 1s ease-in-out;
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+main .stats .stats-content > div:hover .middle .middle-right circle{
+    animation: spin 1s ease-in-out;
+}
+@keyframes spin {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+}
+main .stats .stats-content > div > span{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 300;
+}
+.text {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+main .stats .stats-content .sales i{
+    background-color: var(--secondary-color);
+    color: white;
+}
+main .stats .stats-content .sales .middle .middle-right circle{
+    stroke-dashoffset: calc(251.2 * 0.5);
+}
+main .stats .stats-content .expenses i{
+    background-color: #F2868B;
+    color: white;
+}
+main .stats .stats-content .expenses .text {
+    color: #F2868B;
+}
+main .stats .stats-content .expenses .middle .middle-right circle{
+    stroke:  #F2868B;
+    stroke-dashoffset: calc(251.2 * 0.4);
+}
+main .stats .stats-content .income i{
+    background-color: #8EEACA;
+    color: white;
+}
+main .stats .stats-content .income .text {
+    color: #8EEACA;
+}
+main .stats .stats-content .income .middle .middle-right circle{
+    stroke:  #8EEACA;
+    stroke-dashoffset: calc(251.2 * 0.2);
+}
+/* Recent Orders */
+main .recent-orders table{
+    width: 100%;
+    background-color: white;
+    border-radius: var(--main-border-radius);
+    padding: var(--section-padding);
+    box-shadow: var(--main-box-shadow);
+    text-align: center;
+    transition: all 800ms ease-in-out;
+}
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+main table thead th{
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid var(--primary-color);
+}
+main table tbody td{
+    padding: 15px;
+}
+main table tbody tr{
+    border-bottom: 1px solid var(--primary-color);
+    transition: all 500ms ease-in-out;
+}
+main table tbody tr:hover{
+    background-color: #f1f0f0;
+}
+.success {
+    color: #28A745;
+}
+.warning {
+    color: #FFCC00;
+}
+.primary{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+main .show-all{
+    margin-top: 10px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    animation: bouncing 2.5s linear infinite;
+}
+main .show-all i{
+    margin-bottom: 5px;
+}
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(10px);
+    }
+    40%,
+    60% {
+        transform: translateY(0px);
+    }
+}
+/* Right */
+.right-side{
+    grid-area: right;
+}
+.right-side .recent-content{
+    background-color: white;
+    box-shadow: var(--main-box-shadow);
+    transition: all 800ms ease-in-out;
+    border-radius: var(--main-border-radius);
+    padding: var(--section-padding);
+}
+.right-side .recent-content .cont{
+    display: grid;
+    grid-template-columns: 50px auto;    
+    gap: 15px;
+    align-items: center;
+    font-size: 13px;
+}
+.right-side .recent-content .cont:not(:last-child){
+    margin-bottom: 20px;
+}
+.right-side .recent-content .cont .image{
+    flex-basis: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.right-side .recent-content .cont .image img{
+    max-width: 100%;
+}
+.right-side .recent-content:hover{
+    box-shadow: none;
+}
+
+.right-side .analytics > div:not(:last-child){
+    background-color: white;
+    box-shadow: var(--main-box-shadow);
+    border-radius: var(--main-border-radius);
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 800ms ease-in-out;
+}
+.right-side .analytics > div:not(:last-child):hover{
+    box-shadow: none;
+}
+.right-side .analytics > div:not(:last-child) i{
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-side .analytics > div:not(:last-child) .info h3{
+    font-size: 16px;
+    letter-spacing: 0.3;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.right-side .analytics > div:not(:last-child) .info span{
+    font-size: 12px;
+}
+.right-side .analytics > div:not(:last-child) .order-percentage{
+    font-size: 16px;
+    font-weight: 600;
+}
+.right-side .analytics > div:not(:last-child) .order-numbers{
+    font-size: 18px;
+    font-weight: 800;
+    
+}
+.right-side .analytics .online-orders i{
+    background-color: var(--secondary-color);
+}
+.right-side .analytics .online-orders .order-percentage{
+    color: #8EEACA;
+}
+.right-side .analytics .offline-orders i{
+    background-color: #F2868B;
+}
+.right-side .analytics .offline-orders .order-percentage{
+    color: #F2868B; 
+}
+.right-side .analytics .new-customers i{
+    background-color: #8EEACA;
+}
+.right-side .analytics .new-customers .order-percentage{
+    color: #8EEACA;
+}
+.right-side .analytics .add-product{
+    padding: var(--section-padding);
+    text-align: center;
+    border: 2px dashed var(--secondary-color);
+    border-radius: var(--main-border-radius);
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 800ms ease-in-out;
+}
+.right-side .analytics .add-product:hover{
+    background-color: #e9e9eb;;
+}
+.right-side .analytics .add-product i{
+    margin-right: 10px;
+}
+/* Media Queries For Tablets */
+@media screen and (max-width: 1200px){
+    .container{
+        grid-template-columns: 50px 1fr 460px;   
+        position: relative;     
+    }
+    aside ul li a{
+        display: none;
+    }
+    .notifications{
+        display: none;
+    }
+    main .stats .stats-content {
+        grid-template-columns: 1fr;
+    }
+    main .recent-orders{
+        position: absolute;
+        width: calc(100% - 70px);
+    }
+}
+/* Media Queries For Phone */
+@media screen and (max-width: 767px){
+    .container{
+        grid-template-rows: 50px 1fr 1fr;
+        grid-template-areas: 
+            "nav nav nav"
+            "right right right"
+            "main main main";
+    }
+    .nav-bar .logo{
+        display: none;
+    }
+    .nav-bar .menu{
+        display: block;
+    }
+    aside{
+        background-color: white;
+        z-index: 9999;
+        width: 220px;
+        height: 100vh;
+        padding: var(--section-padding);
+        position: absolute;
+        top: 25px;
+        left: 0;
+        border-radius: var(--main-border-radius);
+    }
+    aside ul li{
+        margin-bottom: 20px;
+    }
+    aside ul li a{
+        display: inline;
+    }
+    .notifications{
+        display: inline;
+    }
+    aside .log-out{
+        position: absolute;
+    }
+    main{
+        position: relative;
+    }   
+    main .recent-orders table thead tr th:last-child{
+        display: none;
+    }
+    main .recent-orders table tbody tr td:last-child{
+        display: none;
+    }
+    main .recent-orders table tbody tr td:nth-child(3){
+        display: none;
+    }
+}
