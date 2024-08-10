@@ -472,7 +472,10 @@ main .show-all i{
     }
 }
 /* Media Queries For Phone */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 790px){
+    body{
+        padding: 20px;
+    }
     .container{
         grid-template-rows: 50px 1fr 1fr;
         grid-template-areas: 

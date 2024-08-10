@@ -15,17 +15,19 @@ links.forEach(function(link) {
     });
 });
 
-const viewportWidth = window.innerWidth;
-const LogOut = document.getElementById("log-out");
-if(viewportWidth > 767 && viewportWidth <= 1200){
-    LogOut.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i>'
-}
-else{
-    LogOut.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i> Log Out'
+window.onload = function(){
+    const viewportWidth = window.innerWidth;
+    const LogOut = document.getElementById("log-out");
+    if(viewportWidth > 790 && viewportWidth <= 1200){
+        LogOut.innerHTML = '<button><i class="fa-solid fa-right-from-bracket"></i></button>'
+    }
+    else{
+        LogOut.innerHTML = '<button><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>'
+    }    
 }
 const DropDownMenu = document.getElementById("menu");
 const Menu = document.getElementById("menu-list");
-Menu.style.display = "none";
+Menu.style.display = "block";
 DropDownMenu.addEventListener("click", function(){
     if(Menu.style.display == "none")
         Menu.style.display = "block";
